@@ -1,4 +1,102 @@
-body {
-  background: black;
+Global Calculator CSS
+
+/* Calculator Container */
+.calculator {
+  max-width: 300px;
+  margin: 2rem auto;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Calculator Display */
+.display {
+  background: #343a40;
   color: white;
+  padding: 1.5rem;
+  text-align: right;
+  font-size: 2rem;
+  font-family: 'Courier New', monospace;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-break: break-all;
+  border-bottom: 2px solid #212529;
+}
+
+/* Buttons Grid Container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #dee2e6;
+  padding: 1px;
+}
+
+/* Basic Button Styles */
+.button {
+  background: white;
+  border: none;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.button:hover {
+  background: #e9ecef;
+}
+
+.button:active {
+  background: #dee2e6;
+  transform: translateY(1px);
+}
+
+/* Operator Buttons */
+.button.operator {
+  background: #e7f5ff;
+  color: #228be6;
+  font-weight: bold;
+}
+
+.button.operator:hover {
+  background: #d0ebff;
+}
+
+/* Equals Button */
+.button.equals {
+  background: #228be6;
+  color: white;
+}
+
+.button.equals:hover {
+  background: #1c7ed6;
+}
+
+/* Clear Button */
+.button.clear {
+  background: #ffe3e3;
+  color: #fa5252;
+  font-weight: bold;
+  grid-column: span 2;
+}
+
+.button.clear:hover {
+  background: #ffc9c9;
+}
+
+/* Zero Button */
+.button.zero {
+  grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .calculator {
+    margin: 1rem;
+    width: auto;
+  }
 }
